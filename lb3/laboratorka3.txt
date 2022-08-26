@@ -1,0 +1,8 @@
+This is BlackSea
+BlackSea's lenght = 1167.3
+BlackSea's width = 673.4
+BlackSea's depth = 1.3
+BlackSea's volume is 1021877.766
+BlackSea's square  = 786059.82
+BlackSea's salinity is 18
+BlackSea's pollution is 2.0

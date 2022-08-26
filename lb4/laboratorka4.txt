@@ -1,0 +1,12 @@
+This is SeaofAzov
+SeaofAzov's lenght = 354.4
+SeaofAzov's width = 246.2
+SeaofAzov's depth = 0.07
+SeaofAzov's volume is 6108.0
+SeaofAzov's square  = 87253.0
+SeaofAzov's salinity is 18
+SeaofAzov's pollution is 2.0
+SeaofAzov has 214
+SeaofAzov's flora 414 species.
+SeaofAzov - 635 fauna species.
+SeaofAzov needs 12216 years to restore.

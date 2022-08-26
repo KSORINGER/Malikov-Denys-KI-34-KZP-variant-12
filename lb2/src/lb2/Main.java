@@ -4,16 +4,15 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Клас main реалізує приклад програми до лабораторної роботи №2
- * 
+ * Клас Main реалізує приклад програми до лабораторної роботи №2
  * @author Malikov Denys
  * @version 1.0.0
  * @since 1.0.0
  */
-public class lab2 {
+public class Main {
 	/**
 	 * Статичний метод main є точкою входу в програму
-	 * 
+	 * @param args
 	 * 
 	 */
 	public static void main(String[] args) throws FileNotFoundException
