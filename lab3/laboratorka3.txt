@@ -1,0 +1,8 @@
+This is Black Sea
+Black Sea's lenght = 732.3
+Black Sea's width = 521.4
+Black Sea's depth = 2.4
+Black Sea's volume is 916370.928
+Black Sea's square  = 381821.22
+Black Sea's salinity is 22
+Black Sea's pollution is 4

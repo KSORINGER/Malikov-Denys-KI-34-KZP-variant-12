@@ -1,7 +1,7 @@
 /**
- * package lb3
+ * package lab3
  */
-package lb3;
+package lab3;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -65,10 +65,7 @@ public class Basin {
      public double getDepth() {       	 
     	 return depth;
      }
-     
-     
-    
-     
+         
         
      /**
       * Method Volume return volume of basin
@@ -88,155 +85,191 @@ public class Basin {
     	 return sq;
      }
      
+     
+     /**
+      * Method to set pollution
+      * 
+      */
      public void setPollution(int pol) {
     	 pollution.setPollution(pol);
      }
      
+     /**
+      * Method to get pollution
+      * 
+      */
      public int getPollution() {
     	 return pollution.getPollution();
      }
      
+     /**
+      * Method give info about purity
+      */
      public void isPolluted() {
     	 pollution.isPoluted();
      }
      
-     
+     /**
+      * Method to set salinity of water
+      * 
+      */
      public void setSalinity(int sal) {
     	 salinity.setSalinity(sal);
      }
      
+     /**
+      * Method to get salinity of water
+      * 
+      */
      public int getSalinity() {
     	 return salinity.getSalinity();
      }
-         
+     /**
+      * Method to take info about type of basin accTo salinity
+      * 
+      */  
      public void TypeofBasin() {
     	 salinity.TypeofBasin();
      }
      
+     /**
+      * Method to set flora 
+      * 
+      */
      public void setAmountFlora(int flr) {
     	 flora.setAmountFlora(flr);
      }
+     
+     /**
+      * Method to get flora of water
+      * 
+      */
      public int getAmountFlora() {
     	 return flora.getAmountFlora();
      }
      
-     public void floraInfo() {
-    	 flora.floraInfo();
+     /**
+      * Method to take floraInfo
+      * @param flora
+      */
+     public void FloraInfo() {
+    	 flora.FloraInfo();
      }
-     
-     public int setAmountFauna(int fna) {
+     /**
+      * Method to set fauna 
+      * 
+      */
+     public void setAmountFauna(int fna) {
     	 fauna.setAmountFauna(fna);
      }
-     public void getAmountFauna() {
+     /**
+      * Method to get water amount fauna
+      * @param fauna
+      */
+     public int getAmountFauna() {
     	 return fauna.getAmountFauna();
      }
-     
+     /**
+      * Method to take fauna info
+      * 
+      */
      public void FaunaInfo() {
     	 fauna.FaunaInfo();
      }
      
      
      
-     class Pollution {
-    	 private int poll = 0;
+  class Pollution {
+    	 private int poll;
     	 
     	 public void setPollution(int pollution) {
     		 this.poll = pollution;
     	 }
     	 
     	 public int getPollution() {
-    		 return pollution;
+    		 return poll;
     	 }   	 
-         /**
-          * Method give info about purity
-          */
+
          public void isPoluted() {
-        	 if(pollution > 5) {
+        	 if(poll > 5) {
         		 System.out.println("Is polluted!");
         	 } else {
         		 System.out.println("Is clear!");
         	 }  
         	 
          }
-     }
+  }
      
      
      
-     class Salinity {
+  class Salinity {
     	 int sal;
-    	 
-    	 
+     	 
     	 public void setSalinity(int salinity) {
     		 this.sal = salinity;
     	 }
     	 
-    	 public void getSalinity() {
-    		 return salinity;
+    	 public int getSalinity() {
+    		 return sal;
     	 }
-    	 
-    	 
-    	 /**
-          * Method which determines type of basin according to salinity
-          * @return
-          */
          public String TypeofBasin() {
-        	 if(salinity > 0 && salinity <= 2) {    		 
+        	 if(sal > 0 && sal <= 2) {    		 
         		 return  "It's freshwatered basin(lake or river).";
-        	 } else if (salinity > 2 && salinity < 5) {
+        	 } else if (sal > 2 && sal < 5) {
         		 return "It's salty lake.";
-        	 } else if (salinity > 5 && salinity < 24) {
+        	 } else if (sal > 5 && sal < 24) {
         		 return "It's sea!";
         	 } else {
         		 return "This is ocean!";
         	 }
         	 
          } 
-     }
+   }
      
      
      
-     class Flora {
+  class Flora {
     	 
-    	  int flr;
-    	  
+    	  int flr;    	  
     	  public void setAmountFlora(int flora) {
     		  this.flr = flora;
     	  }
     	  
     	  public int getAmountFlora() {
-    		  return flora;
+    		  return flr;
     	  }
     	  
-    	  public void floraInfo() {
-    		  if(flora < 100 && flora >=0) {
+    	  public void FloraInfo() {
+    		  if(flr < 100 && flr >=0) {
     			  System.out.println("This basin has a little amount of flora.");
     		  } else {
     			  System.out.println("This basin has huge variety of flora!");
     		  }
     	  }
-     }
+   }
      
      
      
-     class Fauna {
+   class Fauna {
     	 int fna;
+    	   	 
     	 public void setAmountFauna(int fauna) {
     		 this.fna = fauna;
     	 }
     	 
     	 public int getAmountFauna() {
-    		 return fauna;
+    		 return fna;
     	 }
     	 
     	 public void FaunaInfo() {
-        	 if(fauna >= 0 && fauna <= 250) {
+        	 if(fna >= 0 && fna <= 250) {
         		 System.out.println("These waters have good variety of fauna.");
         	 } else {
         		 System.out.println("These waters have excellent variety of living beings!");
         	 }
     	 }
 
-     }
+   }
      
      
           
