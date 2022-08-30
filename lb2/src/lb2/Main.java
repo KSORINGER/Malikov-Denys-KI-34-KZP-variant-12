@@ -17,34 +17,48 @@ public class Main {
 	 */
 	public static void main(String[] args) throws FileNotFoundException
 	{
-		int nRows;
+		int nRows, k;
 		char[][] arr;
 		String filler;
-
+		
 		Scanner in = new Scanner(System.in);
 		File dataFile = new File("MyFile.txt");
 		PrintWriter fout = new PrintWriter(dataFile);
 		System.out.print("Enter the size of MATRIX: ");
 		nRows = in.nextInt();
+		
 		in.nextLine();
 		arr = new char[nRows][];
 		for(int i = 0; i < nRows; i++)		{		 
-			arr[i]= new char[nRows];
+			arr[i]= new char[nRows/2];
 		}
 		System.out.print("Enter filler-symbol: ");
 		filler = in.nextLine();
 		exit:
-			for(int i = 0; i < nRows; i++)			{
-				for(int j = 0; j < nRows; j++)				{
-					
-					if(filler.length() == 1)
+			for(int i = 0; i < nRows; i++)	{
+				for(int j = 0; j < nRows/2; j++)	{					
+					if(filler.length() == 1)						
 					{
-						        if(i < nRows/2 && j < nRows/2)
+						        if(i < nRows/2) {
 						        	arr[i][j] = (char) filler.codePointAt(0);
-						        if(i > (nRows/2 - 1) && j > (nRows/2 - 1))
-						        	arr[i][j] = (char) filler.codePointAt(0);						
-						System.out.print(arr[i][j] + " ");
-						fout.print(arr[i][j] + " ");
+						            System.out.print(arr[i][j] + " ");
+								    fout.print(arr[i][j] + " ");
+						        }
+						        if(i > (nRows/2 - 1) && j < 1) {	
+						        	k = nRows/2;
+						        	while(true) {
+						        		if(k == 0)
+						        			break;
+						        		System.out.print("  ");
+						        		fout.print("  ");
+						        		k--;						        		
+						        	}
+						        }	
+						        if(i > (nRows/2 - 1)) {
+						        	arr[i][j] = (char) filler.codePointAt(0);
+						        	System.out.print(arr[i][j] + " ");
+									fout.print(arr[i][j] + " ");
+						        }
 					}
 					else if (filler.length() == 0)
 					{
